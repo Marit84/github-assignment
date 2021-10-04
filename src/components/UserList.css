@@ -1,0 +1,47 @@
+.userContainer {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px 0 rgba(129, 128, 128, 0.2),
+    0 6px 20px 0 rgba(160, 156, 156, 0.19);
+  transition-duration: 0.4s;
+}
+
+.userContainer:hover {
+  width: 51vw;
+  color: lightseagreen;
+}
+
+.userThumbnail {
+  height: 4em;
+  width: 4em;
+  margin-left: 1em;
+  border-radius: 50%;
+}
+
+.userName {
+  margin-left: 1em;
+  color: darkslategray;
+  text-decoration: none;
+}
+
+.hiddenLink {
+  display: none;
+  margin: auto;
+  margin-right: 1em;
+}
+
+.userContainer:hover > .hiddenLink {
+  display: block;
+  color: lightseagreen;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

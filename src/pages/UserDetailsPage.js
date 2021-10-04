@@ -1,7 +1,12 @@
 import React from "react";
+import UserDetails from "../components/UserDetails";
 
-function UserDetailsPage(props) {
-  return <div></div>;
-}
+const UserDetailsPage = () => {
+  return (
+    <>
+      <UserDetails />
+    </>
+  );
+};
 
 export default UserDetailsPage;

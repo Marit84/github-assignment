@@ -1,5 +1,12 @@
+.mainContainer {
+  margin-top: 4em;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
 .userContainer {
-  width: 50vw;
+  grid-column: 3/5;
+  width: 48vw;
   display: flex;
   align-items: center;
   margin: auto;
@@ -12,7 +19,7 @@
 }
 
 .userContainer:hover {
-  width: 51vw;
+  width: 50vw;
   color: lightseagreen;
 }
 
@@ -40,8 +47,11 @@
   color: lightseagreen;
 }
 
+/* Needs alignment */
 .buttonContainer {
+  width: 50vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+
+  justify-content: space-between;
 }

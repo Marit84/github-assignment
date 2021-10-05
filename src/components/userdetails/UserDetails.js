@@ -14,18 +14,28 @@ function UserDetails() {
   const [following, setFollowing] = useState("");
   const [bio, setBio] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const { username } = useParams();
   const history = useHistory();
-  console.log(username);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(`https://api.github.com/users/${username}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        setIsLoading(false);
         setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
       });
   }, [username]);
+
+  if (isLoading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   const setData = ({ name, login, avatar_url, followers, following, bio }) => {
     setName(name);
@@ -44,14 +54,15 @@ function UserDetails() {
         <h2 className="userHeading">"{userName}"</h2>
         {bio ? <p>{bio}</p> : <p>{name} has no bio</p>}
         <button onClick={() => history.push("/")}>Go to all users</button>
-      </div>
-      <div className="reposList">
-        <h2 className="reposHeading">Top 10 Repos: </h2>
-        <UserRepos username={username} />
         <div className="followersSection">
           <h3>Followers: {followers} </h3>
           <h3>Following: {following} </h3>
         </div>
+      </div>
+      <div className="reposListContainer">
+        <h2 className="reposHeading">Top 10 Repos: </h2>
+
+        <UserRepos username={username} />
       </div>
     </div>
   );

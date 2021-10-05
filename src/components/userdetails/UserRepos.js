@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { isElementOfType } from "react-dom/test-utils";
 import { useParams } from "react-router";
 
 import "./UserDetails.css";
@@ -16,10 +15,10 @@ function UserRepos() {
         console.log(data);
         setRepos(data);
       });
-  }, [username]);
+  }, []);
 
   return (
-    <ul>
+    <ul className="reposList">
       {repos.map((repo) => (
         <div key={repo.id}>
           <a className="reposContainer" href={repo.html_url}>

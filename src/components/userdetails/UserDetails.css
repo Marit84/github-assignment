@@ -1,22 +1,28 @@
 .detailsContainer {
-  width: 45vw;
-  min-width: min-content;
+  max-width: min-content;
+  min-width: 45em;
   min-height: min-content;
   display: flex;
   text-align: center;
   position: relative;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 4em;
+  margin-bottom: 2em;
   border-radius: 5px;
   box-shadow: 0 4px 6px 0 rgba(129, 128, 128, 0.2),
     0 6px 20px 0 rgba(160, 156, 156, 0.19);
 }
 
+.userHeading {
+  color: lightseagreen;
+  margin: 0.25rem;
+}
+
 .userImage {
-  height: 20em;
-  width: 20em;
+  height: 15em;
+  width: 15em;
   border-radius: 50%;
-  margin: 2rem;
+  margin: 1.5em;
 }
 
 .userInfo {
@@ -24,26 +30,33 @@
   min-width: min-content;
 }
 
-.reposList {
+.reposListContainer {
   border-left: 0.25px solid lightseagreen;
-  text-align: left;
-  min-width: min-content;
+  text-align: right;
+  font-size: small;
+  min-width: 20em;
+  max-width: min-content;
   min-height: min-content;
+  padding-bottom: 1em;
 }
 
+.reposList {
+  margin-right: 0.5em;
+  min-height: min-content;
+}
 .reposHeading {
   display: flex;
-  background-color: lightseagreen;
+  background-color: teal;
   color: white;
   justify-content: center;
-  text-align: center;
-  padding: 0.5em 0 0.5em 0;
   border-top-right-radius: 5px;
   margin-top: 0;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  font-size: medium;
 }
 
 .reposContainer {
-  color: darkslategray;
   transition-duration: 0.4s;
 }
 
@@ -53,7 +66,6 @@
 
 .seperator {
   border-bottom: 0.5px solid lightseagreen;
-  margin-bottom: 1em;
 }
 /* 
 Not Working:  aiming to remove the seperatorline on last child 
@@ -62,22 +74,9 @@ Not Working:  aiming to remove the seperatorline on last child
   margin-bottom: 1em;
 } */
 
-.userHeading {
-  color: lightseagreen;
-  margin: 0.25rem;
-}
-
 .followersSection {
   display: flex;
-  background-color: lightseagreen;
-  color: white;
+  color: lightseagreen;
   justify-content: space-around;
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 0;
-  border-bottom-right-radius: 5px;
-}
-
-h3 {
-  margin: 0.5rem;
 }

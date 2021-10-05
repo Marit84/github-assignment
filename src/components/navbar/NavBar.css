@@ -1,0 +1,23 @@
+.navContainer {
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  text-align: center;
+  background-color: teal;
+  color: white;
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  padding-right: 70px;
+  color: #101010;
+  font-size: medium;
+}
+
+.logoImage {
+  margin-right: 7px;
+}

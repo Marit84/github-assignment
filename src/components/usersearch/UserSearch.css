@@ -1,0 +1,10 @@
+.searchField {
+  border-radius: 5px;
+  padding: 0.5em;
+  border-color: teal;
+}
+
+.searchContainer {
+  grid-column: 1/2;
+  margin: auto;
+}

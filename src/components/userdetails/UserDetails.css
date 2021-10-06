@@ -13,11 +13,6 @@
     0 6px 20px 0 rgba(160, 156, 156, 0.19);
 }
 
-.userHeading {
-  color: lightseagreen;
-  margin: 0.25rem;
-}
-
 .userImage {
   height: 15em;
   width: 15em;
@@ -25,13 +20,25 @@
   margin: 1.5em;
 }
 
+.userHeading {
+  color: lightseagreen;
+  margin: 0.25rem;
+}
+
 .userInfo {
   margin: auto;
   min-width: min-content;
 }
 
+.followersSection {
+  display: flex;
+  color: lightseagreen;
+  justify-content: space-around;
+  text-align: center;
+}
+
 .reposListContainer {
-  border-left: 0.25px solid lightseagreen;
+  border-left: 0.25px solid teal;
   text-align: right;
   font-size: small;
   min-width: 20em;
@@ -40,10 +47,6 @@
   padding-bottom: 1em;
 }
 
-.reposList {
-  margin-right: 0.5em;
-  min-height: min-content;
-}
 .reposHeading {
   display: flex;
   background-color: teal;
@@ -54,6 +57,11 @@
   padding-bottom: 0.5em;
   padding-top: 0.5em;
   font-size: medium;
+}
+
+.reposList {
+  margin-right: 0.5em;
+  min-height: min-content;
 }
 
 .reposContainer {
@@ -73,10 +81,3 @@ Not Working:  aiming to remove the seperatorline on last child
   border-bottom: none;
   margin-bottom: 1em;
 } */
-
-.followersSection {
-  display: flex;
-  color: lightseagreen;
-  justify-content: space-around;
-  text-align: center;
-}

@@ -9,6 +9,10 @@ function UserSearch() {
   const [userInput, setUserInput] = useState("");
   const [userSearchResult, setUserSearchResult] = useState("");
 
+  //Would like to search trough all users on input-change, and store results in list.
+  //Beacause of the api's request limits I'm not sure how to achieve this.
+  //And since we can maximum get 100 users per_page, how to do this without firing a ton of requets?
+
   /* useEffect(() => {
     const fetchUser = async () => {
       fetch(`https://api.github.com/users?since=100&per_page=100

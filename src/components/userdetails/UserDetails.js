@@ -49,7 +49,7 @@ function UserDetails() {
   return (
     <div className="detailsContainer">
       <div className="userInfo">
-        <img className="userImage" src={avatar} alt="user avatar" />{" "}
+        <img className="userImage" src={avatar} alt="user avatar" />
         <h1 className="userHeading">{name}</h1>
         <h2 className="userHeading">"{userName}"</h2>
         {bio ? <p>{bio}</p> : <p>{name} has no bio</p>}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserSearch from "../usersearch/UserSearch";
 
+import UserSearch from "../usersearch/UserSearch";
 import "./UserList.css";
 
 function UserList() {
@@ -28,7 +28,7 @@ function UserList() {
     setNextpage(currentPage + 10);
   }, [currentPage]);
 
-  const handleClick = ({ nextPage }) => {
+  const handleNextClick = ({ nextPage }) => {
     setIsLoading(true);
     fetch(`https://api.github.com/users?since=${nextPage}&per_page=10`)
       .then((res) => res.json())
@@ -99,7 +99,7 @@ function UserList() {
             <button onClick={() => handlePrevClick({ prevPage })}>
               {"< Prev"}
             </button>
-            <button onClick={() => handleClick({ nextPage })}>
+            <button onClick={() => handleNextClick({ nextPage })}>
               {"Next >"}
             </button>
           </div>

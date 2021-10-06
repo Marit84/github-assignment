@@ -47,11 +47,9 @@
   color: lightseagreen;
 }
 
-/* Needs alignment */
 .buttonContainer {
-  width: 50vw;
+  width: 49vw;
   display: flex;
   margin: auto;
-
   justify-content: space-between;
 }

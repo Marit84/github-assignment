@@ -8,11 +8,10 @@ const NavBar = () => {
   return (
     <>
       <div className="navContainer">
+        <img className="logoImage" src={logo} alt="Logo" />
         <Link className="logo" to="/">
-          <h1>
-            <img className="logoImage" src={logo} alt="Logo" />
-            GitHub User List
-          </h1>
+          <h1 className="logoText">GitHub Users</h1>
+          <p>-a simple GitHub User search</p>
         </Link>
       </div>
     </>

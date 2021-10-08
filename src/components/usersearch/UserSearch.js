@@ -9,7 +9,7 @@ function UserSearch() {
 
   useEffect(() => {
     const search = async () => {
-      await fetch(`https://api.github.com/search/users?q=${userInput}`)
+      await fetch(`https://api.github.com/search/users?q=${userInput}+in:name`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data.items);
@@ -43,7 +43,7 @@ function UserSearch() {
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
         />
-        {result}
+        <div className="searchResults">{result}</div>
       </div>
     </>
   );

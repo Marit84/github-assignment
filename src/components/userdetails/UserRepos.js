@@ -15,7 +15,7 @@ function UserRepos() {
         console.log(data);
         setRepos(data);
       });
-  }, []);
+  }, [username]);
 
   return (
     <ul className="reposList">
